@@ -4,10 +4,10 @@ export default function Hero() {
   return (
     <section className="relative bg-cream pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden">
       <div
-        className="pointer-events-none absolute -right-14 -top-6 w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] lg:-right-24 lg:top-1/2 lg:-translate-y-1/2 lg:w-[620px] lg:h-[620px]"
+        className="pointer-events-none absolute hidden lg:block -right-24 top-1/2 -translate-y-1/2 w-[620px] h-[620px]"
         aria-hidden="true"
       >
-        <LogoWatermark tone="light" className="w-full h-full opacity-[0.1] lg:opacity-[0.08]" />
+        <LogoWatermark tone="light" className="w-full h-full opacity-[0.08]" />
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative">
@@ -21,17 +21,29 @@ export default function Hero() {
           </p>
         </div>
 
-        <h1 className="font-display font-extrabold leading-[0.9] tracking-tight">
-          <span className="block text-ink text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem]">
-            Beyond
-          </span>
-          <span className="block text-ink text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem]">
-            Content.
-          </span>
-          <span className="block text-stone text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem]">
-            Into Culture.
-          </span>
-        </h1>
+        <div className="relative">
+          <div
+            className="pointer-events-none absolute inset-0 flex items-center justify-center lg:hidden"
+            aria-hidden="true"
+          >
+            <LogoWatermark
+              tone="light"
+              className="w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] opacity-[0.15]"
+            />
+          </div>
+
+          <h1 className="relative z-10 font-display font-extrabold leading-[0.9] tracking-tight">
+            <span className="block text-ink text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem]">
+              Beyond
+            </span>
+            <span className="block text-ink text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem]">
+              Content.
+            </span>
+            <span className="block text-stone text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem]">
+              Into Culture.
+            </span>
+          </h1>
+        </div>
 
         <div className="mt-14 flex flex-wrap items-center gap-6">
           <a
